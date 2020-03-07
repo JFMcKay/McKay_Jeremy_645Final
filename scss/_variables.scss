@@ -10,3 +10,13 @@ $planetBackground: rgba(205, 205, 205, 0.3);
 $sized: "Sized.png";
 $imgFolder: "../images/";
 $bborderStyle: thick solid #000;
+// This is a SASS list
+$sizes: 40px, 50px, 80px;
+// This is a my @each to set an icon size I used for my hamburger
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+}

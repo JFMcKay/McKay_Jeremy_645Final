@@ -1,0 +1,64 @@
+header {
+    background-color: $headerBackground;
+    margin: 0 auto;
+    section {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 110px;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        max-width: 920px;
+        h1{
+            grid-column: 2 / 5;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        label {
+            // A whole lot of nesting going on here.
+            img {
+                grid-column: 6 / -1;
+            }
+        }
+        nav {
+            display: none;
+        }
+        input[type=checkbox] {
+            display: none;
+        }
+        input[type=checkbox]:checked ~ nav.menu {
+            display:block;
+        }
+    }
+}
+    
+header nav {
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+    background-color: lighten($headerBackground, 10);
+    ul {
+        list-style-type: none;
+    }
+    ul li {
+            border-bottom: $bborderStyle;
+            font-size: 1.5em;
+            a {
+                text-decoration: none;
+                display: block;
+                padding: .20em;
+                &:visited {
+                    background-color: #fff;
+                }
+                &:hover {
+                    // Here I used a color function
+                    background-color: darken($headerBackground, 7);
+                }
+            }
+            &:last-child {
+                border: none;
+            }
+        }
+
+}

@@ -7,19 +7,39 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <h1>Two planets</h1>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Earth</a></li>
-                <li><a href="">Mars</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/earth.html">Earth</a></li>
+                <li><a href="pages/mars.html">Mars</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+    <header>
+        <section>
+             <h1>Two Planets</h1>
+<!--               THE FOLLOWING CODE IS USEFUL FOR DROP DOWN BUTTON  USED A SASS GENERATED CLASS THAT USED EACH FOR ICON SIZE-->
+             <label for="showMenu" class="showMenu"><img class="icon-50px" src="images/icons/HamburgerMenu.png" alt="Menu Icon"></label>
+             <input type="checkbox" id="showMenu" role="button">
+             <nav class="menu">
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/earth.html">Earth</a></li>
+                    <li><a href="pages/mars.html">Mars</a></li>
+                 </ul>
+             </nav>
+<!--               END OF CODE FOR DROP DOWN BUTTON-->
+         </section>
+     </header>
     <main class="container">
-        <article class="earth"></article>
-        <article class="mars"></article>
+        <article class="earth">
+            <p>Earth is our home. Highly habitable, for now.</p>
+        </article>
+        <article class="mars">
+            <p>Mars is not our home. Totally uninhabitable, for now.</p>
+        </article>
     </main>
 </body>
 </html>
