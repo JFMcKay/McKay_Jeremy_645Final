@@ -1,0 +1,61 @@
+// planet class created to extend to other planets
+.planet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 340px;
+    width: 500px;
+    max-width: 80%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: width 1s, height 1s;
+    // nested h1 in the planet class
+    h1 {
+        padding: .5em;
+        width: 150px;
+        text-align: center;
+        border-radius: 5%;
+        background-color: $planetBackground;
+    }
+    // 
+    &:hover {
+        height: 300px;
+        width: 75%;
+        // background-size: contain;
+    }
+}
+.mercury {
+    @include planetBack(mercury);
+    @extend .planet;
+}
+.venus {
+    @include planetBack(venus);
+    @extend .planet;
+}
+.earth {
+    @include planetBack(earth);
+    @extend .planet;
+}
+.mars {
+    @include planetBack(mars);
+    @extend .planet;
+}
+.jupiter {
+    @include planetBack(jupiter);
+    @extend .planet;
+}
+.saturn {
+    @include planetBack(saturn);
+    @extend .planet;
+}
+.uranus {
+    @include planetBack(uranus);
+    @extend .planet;
+    color: $uranusFont;
+}
+.neptune {
+    @include planetBack(neptune);
+    @extend .planet;
+}

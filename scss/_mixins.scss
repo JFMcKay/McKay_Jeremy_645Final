@@ -1,0 +1,3 @@
+@mixin planetBack($planet) {
+    background-image: url($imgFolder + $planet + "Sized.png");
+}

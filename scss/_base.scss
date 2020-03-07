@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: $bodyBackground;
+    background-image: url($imgFolder + "starsBack.jpg");
+    background-attachment: fixed;
+    color: $fontMain;
+}
+header {
+    background-color: $headerBackground;
+    display: block;
+    h1{
+        text-align: center;
+        font-size: 2.5em;
+        border-bottom: $bborderStyle;
+    }
+}
+nav {
+    text-align: center;
+    grid-column: 3 / -1;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+            display: block;
+            border-bottom: $bborderStyle;
+            a {
+                padding: .75em;
+                text-decoration: none;
+                display: block;
+                &:visited {
+                    background-color: #fff;
+                }
+                &:hover {
+                    background-color: darken($headerBackground, 7);
+                }
+            }
+    }
+
+}
+
+
+main {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: $mainBackground;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 6px 20px 0 rgba(187, 187, 187, 0.25);
+}
