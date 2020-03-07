@@ -1,7 +1,7 @@
 @mixin planetBack($planet) {
     background-image: url($imgFolder + $planet + "Sized.png");
 }
-
+// These are my mixins one with an if statement.
 @mixin break($args...) {
     @if length($args) == 1 {
         @media (min-width: nth($args, 1)) {
